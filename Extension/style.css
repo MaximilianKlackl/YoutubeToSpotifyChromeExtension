@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #2D2D2D;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-container{
+    width: 180px;
+    min-height: 300px;
+    margin: 0 auto;
+    transition: ease-in 1s;
+    padding: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+}
+
+#image{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#image img {
+    width: 440px;
+    vertical-align: top;
+    z-index: -1;
+}
+
+#image:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    opacity: 1;
+}
+
+
+#playlist-add-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+    align-items: center;   
+    height: 100px;
+    width: 100%;
+}
+
+#button{
+    text-align: center;
+    margin-top: 15px;
+}
+
+#button, #playlists, #convert{
+    cursor: pointer;
+    width: 175px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 14px;
+    color: white;
+    background-color: #53B953;
+    border: solid 0px;
+    border-radius: 20px;
+    outline: 0;
+}
+
+#playlists{
+    text-align-last: center;
+    margin-top: 35%;
+}
+
+#title{
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 16px;
+    line-height: 25px;;
+}
+
+
+#available{
+    position: fixed;
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#text{
+    color:white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 58%;
+}
+
+#button:active{
+    background-color: rgb(65, 148, 65);
+}
+
+#loading{
+    position: fixed;
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#select{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
+    position: fixed;
+    background-repeat: no-repeat;
+    margin-top: 2.4%;
+    margin-left: 60px;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+}
+
+#playlist-icon-open, #playlist-icon-close{
+    cursor: pointer;
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 30px; height: 30px;
+}
+
+#playlist-popup{
+    width: 180px;
+    min-height: 300px;
+    margin: 0 auto;
+    transition: ease-in 1s;
+    padding: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+}
+
+#convert{
+    margin-top: 50px;
+}
+
+#url{
+    width: 175px;
+    margin: 0 auto;
+    margin-top: 50px;
+    word-wrap: break-word;
+    overflow:hidden;
+}
+
+#url-link{
+    color: white;
+    font-size: 18px;
+    word-wrap: break-word;
+    overflow:hidden;
+    text-decoration: none;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+/* loading animation */ 
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    margin-top: 160px;
+    margin-left: 110px;
+    width: 80px;
+    height: 80px;
+}
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  

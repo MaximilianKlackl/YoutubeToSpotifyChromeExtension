@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="image">
+        <img src="" id="image-url"/>
+    </div>
+    <main id="main-container">
+        <svg id="playlist-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 18h10v2H2v-2zm0-7h14v2H2v-2zm0-7h20v2H2V4zm17 11.17V9h5v2h-3v7a3 3 0 1 1-2-2.83z" fill="rgba(255,255,255,1)"/></svg>
+        <div id="img-title-container">
+            <h3 id="title"></h3>
+            </div>
+            <div id="playlist-add-container">
+                <div id="select"></div>
+                <select id="playlists">
+                    <option value="Favourites">Favourites</option>
+                </select>
+            <button id="button">add</button>
+        </div>
+    </main>
+    <div id="available">
+        <div id="text">Extension is not available<br>
+            maybe you are on the wrong site</div>
+    </div>
+    <div id="loading">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div id="playlist-popup">
+        <svg id="playlist-icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 18h10v2H2v-2zm0-7h14v2H2v-2zm0-7h20v2H2V4zm17 11.17V9h5v2h-3v7a3 3 0 1 1-2-2.83z" fill="rgba(255,255,255,1)"/></svg>
+        <button id="convert">convert Playlist</button>
+        <div id="url"><a href="" id="url-link"></a></div>
+    </div>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="secrets.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>

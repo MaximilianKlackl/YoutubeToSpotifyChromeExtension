@@ -1,0 +1,21 @@
+{
+    "name": "Youtube to Spotify",
+    "version": "1",
+    "description": "Add Youtube Song to your Spotify",
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "persistent": false,
+      "scripts": ["background.js", "secrets.js", "jquery-3.4.1.min.js"]
+    },
+    "content_scripts": [{
+        "matches": ["https://www.youtube.com/*", "https://maximilianklackl.github.io/YoutubeToSpotifyChromeExtension/*"],
+        "js": ["jquery-3.4.1.min.js", "bundle.js"]
+    }],
+    "permissions": [
+      "tabs", "activeTab", "storage"
+    ],
+    "manifest_version": 2
+}
+  
